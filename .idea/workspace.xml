@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="452dcce9-f58a-4101-983c-4e21fad71103" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="1m0M5W5vmtlBx2TSd4LdjNIkyiE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="452dcce9-f58a-4101-983c-4e21fad71103" name="Default Changelist" comment="" />
+      <created>1608625877564</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608625877564</updated>
+      <workItem from="1608625880296" duration="1805000" />
+      <workItem from="1608627722446" duration="1285000" />
+      <workItem from="1608629535437" duration="1794000" />
+      <workItem from="1608631347022" duration="2419000" />
+      <workItem from="1608633808996" duration="1379000" />
+      <workItem from="1608635624888" duration="1333000" />
+      <workItem from="1608638251255" duration="1794000" />
+      <workItem from="1608640231733" duration="1779000" />
+      <workItem from="1608642048479" duration="1216000" />
+      <workItem from="1608645140858" duration="1096000" />
+      <workItem from="1608988104301" duration="1744000" />
+      <workItem from="1608989868866" duration="1801000" />
+      <workItem from="1608991685354" duration="1796000" />
+      <workItem from="1608993497872" duration="1796000" />
+      <workItem from="1608995308387" duration="304000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="667" y="162" key="#PHP" timestamp="1608630401287">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="162" key="#PHP/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608630401287" />
+    <state x="552" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608629340790">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608629340790" />
+    <state x="297" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608989710193">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="297" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608989710193" />
+    <state width="1292" height="277" key="GridCell.Tab.0.bottom" timestamp="1608627827268">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608627827268" />
+    <state width="1292" height="277" key="GridCell.Tab.0.center" timestamp="1608627827267">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608627827267" />
+    <state width="1292" height="277" key="GridCell.Tab.0.left" timestamp="1608627827267">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608627827267" />
+    <state width="1292" height="277" key="GridCell.Tab.0.right" timestamp="1608627827268">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1292" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608627827268" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1608626944196">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608626944196" />
+    <state x="776" y="242" key="NewPhpClassDialog" timestamp="1608993076493">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="776" y="242" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608993076493" />
+    <state x="795" y="442" key="NewPhpFileDialog" timestamp="1608994074549">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="795" y="442" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608994074549" />
+    <state x="834" y="406" width="316" height="248" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1608629635415">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="834" y="406" width="316" height="248" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608629635415" />
+  </component>
+</project>

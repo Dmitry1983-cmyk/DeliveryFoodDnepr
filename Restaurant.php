@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!Doctype html>
 <html lang="ru">
 <head>
@@ -19,14 +22,31 @@
         <!-- поле поиска -->
         <input type="text" class="input input-adress" placeholder="Адрес доставки" />
         <div class="buttons">
-            <button class="button button-primary">
-                <img class="button-icon" src="img/user.svg" alt="user">
-                <span class="button-text">Войти</span>
-            </button>
+
+
+<!--            <button class="button button-primary">-->
+<!--                <img class="button-icon" src="img/user.svg" alt="user">-->
+<!--                <span class="button-text">Войти</span>-->
+<!--            </button>-->
+<!------------------------------------------------------------->
+            <?php
+            if(isset($_SESSION["session_username"]))
+            {
+                echo '
             <button class="button" id="cart-button">
                 <img class="buttn-icon" src="img/shopping-cart.svg" alt="shopping cart">
                 <span class="button-text">Корзина</span>
-            </button>
+            </button>';
+            }else{
+                echo '
+            <button class="button" id="cart-button" style="display: none">
+                <img class="buttn-icon" src="img/shopping-cart.svg" alt="shopping cart">
+                <span class="button-text">Корзина</span>
+            </button>';
+            }
+            ?>
+<!-------------------------------------------------------------->
+
         </div>
     </header>
     <!-- /container -->
@@ -88,46 +108,7 @@ $data->getRestaurantMenu();
                 </div>
             </div>
             <!-- /.foods-row -->
-            <div class="food-row">
-                <span class="food-name">Ролл угорь стандарт</span>
-                <strong class="food-price">250 usd</strong>
-                <div class="food-counter">
-                    <button class="counter-button">-</button>
-                    <span class="counter">1</span>
-                    <button class="counter-button">+</button>
-                </div>
-            </div>
-            <!-- /.foods-row -->
-            <div class="food-row">
-                <span class="food-name">Ролл угорь стандарт</span>
-                <strong class="food-price">250 usd</strong>
-                <div class="food-counter">
-                    <button class="counter-button">-</button>
-                    <span class="counter">1</span>
-                    <button class="counter-button">+</button>
-                </div>
-            </div>
-            <!-- /.foods-row -->
-            <div class="food-row">
-                <span class="food-name">Ролл угорь стандарт</span>
-                <strong class="food-price">250 usd</strong>
-                <div class="food-counter">
-                    <button class="counter-button">-</button>
-                    <span class="counter">1</span>
-                    <button class="counter-button">+</button>
-                </div>
-            </div>
-            <!-- /.foods-row -->
-            <div class="food-row">
-                <span class="food-name">Ролл угорь стандарт</span>
-                <strong class="food-price">250 usd</strong>
-                <div class="food-counter">
-                    <button class="counter-button">-</button>
-                    <span class="counter">1</span>
-                    <button class="counter-button">+</button>
-                </div>
-            </div>
-            <!-- /.foods-row -->
+
         </div>
         <!-- /.modal-body -->
         <div class="modal-footer">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="452dcce9-f58a-4101-983c-4e21fad71103" name="Default Changelist" comment="" />
+    <list default="true" id="bfa9e968-82cb-4891-a4ff-48735fbef513" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,45 +10,72 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
-  <component name="ProjectId" id="1m0M5W5vmtlBx2TSd4LdjNIkyiE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1mcFZnSSENXcapFLl08PkhRR7Je" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
+    <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="452dcce9-f58a-4101-983c-4e21fad71103" name="Default Changelist" comment="" />
-      <created>1608625877564</created>
+      <changelist id="bfa9e968-82cb-4891-a4ff-48735fbef513" name="Default Changelist" comment="" />
+      <created>1609785030347</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1608625877564</updated>
-      <workItem from="1608625880296" duration="1805000" />
-      <workItem from="1608627722446" duration="1285000" />
-      <workItem from="1608629535437" duration="1794000" />
-      <workItem from="1608631347022" duration="2419000" />
-      <workItem from="1608633808996" duration="1379000" />
-      <workItem from="1608635624888" duration="1333000" />
-      <workItem from="1608638251255" duration="1794000" />
-      <workItem from="1608640231733" duration="1779000" />
-      <workItem from="1608642048479" duration="1216000" />
-      <workItem from="1608645140858" duration="1096000" />
-      <workItem from="1608988104301" duration="1744000" />
-      <workItem from="1608989868866" duration="1801000" />
-      <workItem from="1608991685354" duration="1796000" />
-      <workItem from="1608993497872" duration="1796000" />
-      <workItem from="1608995308387" duration="710000" />
+      <updated>1609785030347</updated>
+      <workItem from="1609785031662" duration="5517000" />
+      <workItem from="1609831999586" duration="1513000" />
+      <workItem from="1609834969619" duration="1796000" />
+      <workItem from="1609836789728" duration="2153000" />
+      <workItem from="1609838956382" duration="1218000" />
+      <workItem from="1609840189006" duration="1960000" />
+      <workItem from="1609842164908" duration="1092000" />
+      <workItem from="1609844080930" duration="608000" />
+      <workItem from="1609848149033" duration="1350000" />
+      <workItem from="1609852863344" duration="1801000" />
+      <workItem from="1609855168539" duration="1978000" />
+      <workItem from="1609857219140" duration="21654000" />
+      <workItem from="1609880928068" duration="681000" />
+      <workItem from="1609922384169" duration="873000" />
+      <workItem from="1609927776350" duration="599000" />
+      <workItem from="1609930086399" duration="555000" />
+      <workItem from="1609931015647" duration="919000" />
+      <workItem from="1609935892860" duration="21000" />
+      <workItem from="1609939729668" duration="1520000" />
+      <workItem from="1609941814320" duration="664000" />
+      <workItem from="1609958801989" duration="143000" />
+      <workItem from="1610025595311" duration="2257000" />
+      <workItem from="1610028578137" duration="1806000" />
+      <workItem from="1610030408707" duration="1175000" />
+      <workItem from="1610032635477" duration="1364000" />
+      <workItem from="1610036279523" duration="1618000" />
+      <workItem from="1610038074693" duration="1618000" />
+      <workItem from="1610039892052" duration="1725000" />
+      <workItem from="1610041703285" duration="1796000" />
+      <workItem from="1610044282895" duration="4612000" />
+      <workItem from="1610049708026" duration="2059000" />
+      <workItem from="1610051786826" duration="1222000" />
+      <workItem from="1610053867931" duration="1557000" />
+      <workItem from="1610089695200" duration="614000" />
+      <workItem from="1610092856136" duration="987000" />
+      <workItem from="1610094665556" duration="1347000" />
+      <workItem from="1610096634248" duration="2022000" />
+      <workItem from="1610100336145" duration="1707000" />
+      <workItem from="1610102148651" duration="1245000" />
+      <workItem from="1610105635024" duration="1799000" />
+      <workItem from="1610107447643" duration="1794000" />
+      <workItem from="1610109256999" duration="1340000" />
+      <workItem from="1610112029634" duration="1707000" />
+      <workItem from="1610113847436" duration="2055000" />
+      <workItem from="1610115917238" duration="1795000" />
     </task>
     <servers />
   </component>
@@ -56,49 +83,37 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="667" y="162" key="#PHP" timestamp="1608630401287">
+    <state x="552" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609840066113">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="162" key="#PHP/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608630401287" />
-    <state x="552" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608629340790">
+    <state x="552" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1609840066113" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610102197033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608629340790" />
-    <state x="297" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608989710193">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610102197033" />
+    <state width="1292" height="277" key="GridCell.Tab.0.bottom" timestamp="1609848897864">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="297" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608989710193" />
-    <state width="1292" height="277" key="GridCell.Tab.0.bottom" timestamp="1608627827268">
+    <state width="1292" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1609848897864" />
+    <state width="1292" height="277" key="GridCell.Tab.0.center" timestamp="1609848897864">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608627827268" />
-    <state width="1292" height="277" key="GridCell.Tab.0.center" timestamp="1608627827267">
+    <state width="1292" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1609848897864" />
+    <state width="1292" height="277" key="GridCell.Tab.0.left" timestamp="1609848897863">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608627827267" />
-    <state width="1292" height="277" key="GridCell.Tab.0.left" timestamp="1608627827267">
+    <state width="1292" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1609848897863" />
+    <state width="1292" height="277" key="GridCell.Tab.0.right" timestamp="1609848897864">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608627827267" />
-    <state width="1292" height="277" key="GridCell.Tab.0.right" timestamp="1608627827268">
+    <state width="1292" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1609848897864" />
+    <state x="795" y="442" key="NewPhpFileDialog" timestamp="1610102093673">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608627827268" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1608626944196">
+    <state x="795" y="442" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610102093673" />
+    <state x="461" y="151" key="SettingsEditor" timestamp="1609785070188">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608626944196" />
-    <state x="776" y="242" key="NewPhpClassDialog" timestamp="1608993076493">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="776" y="242" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608993076493" />
-    <state x="795" y="442" key="NewPhpFileDialog" timestamp="1608994074549">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="795" y="442" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608994074549" />
-    <state x="834" y="406" width="316" height="248" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1608629635415">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="834" y="406" width="316" height="248" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1608629635415" />
+    <state x="461" y="151" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1609785070188" />
   </component>
 </project>

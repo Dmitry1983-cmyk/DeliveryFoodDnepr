@@ -82,13 +82,94 @@ class RestaurantView
 
         $start=abs($page*$per_page);
         $tmp_id=$_GET['id'];
-        $q="SELECT Img,Dish,Cost FROM Menu left join Restaurant on Menu.RestaurantId=Restaurant.Id where RestaurantName='$tmp_id' LIMIT $start,$per_page";
+        //$q="SELECT Img,Dish,Cost FROM Menu left join Restaurant on Menu.RestaurantId=Restaurant.Id where RestaurantName='$tmp_id' LIMIT $start,$per_page";
+        $q="SELECT Img,Dish,Cost FROM Menu left join Restaurant on Menu.RestaurantId=Restaurant.Id where RestaurantName='$tmp_id' ";
         $res=mysqli_query($link,$q);
         while($row=mysqli_fetch_array($res)) {
             //--------------------------
             echo '
                                         <!-- /.cards -->
-                
+
+                <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                <img src="'. $row[ 'Img'].'" alt="image" class="card-omage" />
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">'. $row['Dish'] .'</h3>
+                        </div>
+                        <!-- /.card-heading -->
+                        <div class="card-info">
+                            <div class="ingridients">'. $row['Cost'] .' грн.</div>
+                        </div>
+                        <!-- /.card-info -->
+                        <div class="card-buttons">';
+
+                        //<!----------------------------------------------------->
+                        if(isset($_SESSION["session_username"]))
+                    {
+                        echo '
+                <button class="button button-primary">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/basket_shop.svg" alt="shpping-cart" class="button-card-image">
+                            </button>';
+                    }else{
+                        echo '
+                        <button class="button button-primary" style="display: none;">
+                                <span class="button-card-text">В корзину</span>
+                                <img src="img/basket_shop.svg" alt="shpping-cart" class="button-card-image">
+                            </button>';
+                    }
+                       // <!------------------------------------------------------>
+            echo '
+                        </div>
+                    </div>
+                </div>
+
+            <!-- /.cards -->
+           ';
+            //-------------------------
+        }
+        echo '</div>';
+
+        $q="SELECT count(*) FROM Menu left join Restaurant on Menu.RestaurantId=Restaurant.Id where RestaurantName='$tmp_id'";
+        $res=mysqli_query($link,$q);
+        $row=mysqli_fetch_row($res);
+        $total_rows=$row[0];
+       // $total_rows=mysqli_num_rows($res);
+
+        $num_pages=ceil($total_rows/$per_page);
+        echo '
+    <div class="btn-div-class" style="">
+
+    ';
+        for($i=1;$i<=$num_pages;$i++) {
+            if ($i-1 == $page) {
+                //echo '<a class="btn">'.$i.'</a>';
+            } else {
+//                echo '<a class="btn" href="'.$_SERVER['PHP_SELF'].'?id='.$tmp_id.'?page='.$i.'">'.$i."</a> ";
+//                echo '<a class="btn" href="Restaurant.php?id='.$tmp_id.'?page='.$i.'">'.$i."</a> ";
+            }
+        }
+        echo '
+</div>
+';
+        mysqli_close($link);
+    }
+
+    //---------------search dish&restaurant------------------------------
+    public function searchDishRestaurant()
+    {
+        $link = mysqli_connect("localhost", "root", "", "deliveryfooddnepr")  or die("Ошибка " . mysqli_error($link));
+
+        $search=$_POST['search_text'];
+        $search=mb_strtolower($search);
+        $q="SELECT RestaurantName,Img,Dish,Cost FROM Menu left join Restaurant on Menu.RestaurantId=Restaurant.Id  where RestaurantName like '%$search%' or Dish like'%$search%';";
+        $res=mysqli_query($link,$q);
+
+        while($row=mysqli_fetch_array($res)) {
+            //--------------------------
+            echo '
+                                        <!-- /.cards -->
+
                 <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
                 <img src="'. $row[ 'Img'].'" alt="image" class="card-omage" />
                     <div class="card-text">
@@ -108,36 +189,15 @@ class RestaurantView
                         </div>
                     </div>
                 </div>
-                
+
             <!-- /.cards -->
            ';
             //-------------------------
         }
         echo '</div>';
 
-        $q="SELECT Img,Dish,Cost FROM Menu left join Restaurant on Menu.RestaurantId=Restaurant.Id where RestaurantName='$tmp_id'";
-        $res=mysqli_query($link,$q);
-        $row=mysqli_fetch_row($res);
-        //$total_rows=$row[0];
-        $total_rows=mysqli_num_rows($res);
-
-        $num_pages=ceil($total_rows/$per_page);
-        echo '
-    <div class="btn-div-class" style="">
-
-    ';
-        for($i=1;$i<=$num_pages;$i++) {
-            if ($i-1 == $page) {
-                echo '<a class="btn">'.$i.'</a>';
-            } else {
-                echo '<a class="btn" href="'.$_SERVER['PHP_SELF'].'?page='.$i.'">'.$i."</a> ";
-            }
-        }
-        echo '
-</div>
-';
-        mysqli_close($link);
     }
+    //-------------------------------------------------------------------
 
 }
 ?>

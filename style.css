@@ -58,8 +58,13 @@ body{
 }
 
 .button-primary{
-    background: #1890FF;
-    border: 1px solid #1890FF;
+    /*background: #1890FF;*/
+    /*border: 1px solid #1890FF;*/
+    border: solid 1px #da7c0c;
+    background: #f78d1d;
+    background: -moz-linear-gradient(top,  #faa51a, #f47a20);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+
     color:#FFFFFF;
     margin-right: 10px;
 }
@@ -714,11 +719,19 @@ body{
     display: block;
     margin: 0 auto;
     width: 80px;
-    border: 2px solid darkcyan;
-    border-radius: 2px;
-    background-color: #3ec45e;
+
+    /*border: 2px solid darkcyan;*/
+    /*border-radius: 2px;*/
+    /*background-color: #3ec45e;*/
+    /*color: darkcyan;*/
+
+    border: solid 1px #da7c0c;
+    background: #f78d1d;
+    background: -moz-linear-gradient(top,  #faa51a, #f47a20);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+    color: #fff;
+
     padding: 10px 30px;
-    color: darkcyan;
     text-transform: uppercase;
     font-family: arial;
     cursor: pointer;
@@ -726,14 +739,15 @@ body{
 }
 
 .lab_btn:hover{
-    background-color: darkcyan;
-    color: white;
+    /*background-color: darkcyan;*/
+    /*color: white;*/
 }
 
 .popup{
     display: block;
     width: 260px;
-    background-color: darkcyan;
+    /*background-color: #08a93b;*/
+    background-color: rgba(8,169,59,0.7);
     padding: 30px;
     text-transform: uppercase;
     font-family: arial;
@@ -758,12 +772,27 @@ body{
     outline: none;
 }
 
-#submit{
-    background-color: #1cbfd9;
+.acc-out-a{
+    text-decoration: none;
+}
+
+.submit,.sub{
+    border: solid 1px #da7c0c;
+    background: #f78d1d;
+    background: -moz-linear-gradient(top,  #faa51a, #f47a20);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+    color: #fff;
+
     cursor: pointer;
 }
-#reg{
-    background-color: #1fe587;
+.reg{
+    /*background-color: #1fe587;*/
+    border: solid 1px #da7c0c;
+    background: #f78d1d;
+    background: -moz-linear-gradient(top, #fa4e1a, #f47a20);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+    color: #FFFFFF;
+
     cursor: pointer;
 }
 

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!Doctype html>
 <html lang="ru">
 <head>
@@ -20,6 +23,15 @@
             </a>
             <!-- поле поиска -->
             <input type="text" class="input input-adress" placeholder="Адрес доставки" />
+            <?php
+            if(isset($_SESSION["session_username"]))
+            {
+                echo '<p>Здравствуй ' .$_SESSION['session_username'].'</p>';
+            echo '<p><a class="acc-out-a" href="logout.php">Выйти</a></p>';
+            }else{
+               echo '<span class="user_name">Здравствуй Пользователь</span>';
+            }
+            ?>
             <!----------------------------------------------------------------->
             <!----------------------------------------------------------------->
             <div class="buttons">
@@ -28,20 +40,69 @@
 
                 <div class="main_div">
                     <input type="checkbox" id="callback">
-                    <label id="lab_btn" for="callback">
+                    <?php
+                    if(isset($_SESSION["session_username"]))
+                    {
+                        echo '
+                        <label id="lab_btn" for="callback" style="display: none">
                         <img class="button-icon" src="img/user.svg" alt="user">Войти
-                    </label>
+                    </label>';
+                    }else{
+                        echo '
+                        <label id="lab_btn" for="callback">
+                        <img class="button-icon" src="img/user.svg" alt="user">Войти
+                    </label>';
+                    }
+                    ?>
+<!--                    <label id="lab_btn" for="callback">-->
+<!--                        <img class="button-icon" src="img/user.svg" alt="user">Войти-->
+<!--                    </label>-->
 
                     <div action="" class="popup">
                         <span>Введите данные</span>
                         <input type="text" name="login" placeholder="Логин">
-                        <input type="text" name="psw" placeholder="Пароль">
-                        <input id="submit" name="enter" type="submit" value="Войти">
-                        <input id="reg" name="register" type="submit" value="Регистрация">
+                        <input type="password" name="psw" placeholder="Пароль">
+                        <input class="submit" name="enter" type="submit" value="Войти">
+                        <input class="reg" name="register" type="submit" value="Регистрация">
                         <label class="close_modal" for="callback">+</label>
                     </div>
                 </div>
+<?php
+$con = mysqli_connect("localhost", "root", "", "DeliveryFoodDnepr")  or die("Ошибка " . mysqli_error($con));
 
+if(isset($_POST['register']))
+{
+    header('Location: register.php');
+}
+if(isset($_POST['enter']))
+{
+    if(!empty($_POST['login']) && !empty($_POST['psw']))
+    {
+        $login=htmlspecialchars($_POST['login']);
+        $password=htmlspecialchars($_POST['psw']);
+        $query =mysqli_query($con,"select * from DataUser left join LogPasUser on DataUser.PassIdUser = LogPasUser.Id
+                                        WHERE UserNickname='".$login."' AND HeshPas='".$password."'");
+        $numrows=mysqli_num_rows($query);
+        if($numrows!=0)
+        {
+            while($row=mysqli_fetch_assoc($query))
+            {
+                $dbusername=$row['UserNickname'];
+                $dbpassword=$row['HeshPas'];
+            }
+            if($login == $dbusername && $password == $dbpassword)
+            {
+                $_SESSION['session_username']=$login;
+                header("Location: intropage.php");
+            }
+        } else {
+
+            echo  "Invalid username or password!";
+        }
+
+    }
+}
+?>
                 <!--------------------------Modal------------------------------------------>
 
                 <!--------------------------Modal------------------------------------------>
@@ -65,7 +126,6 @@
 
             <section class="restaraunts">
                 <div class="section-heading">
-                    <h2 class="section-title">Рестораны</h2>
                     <input  type="submit" name="submit" style="width: 100px; height: 42px;border-radius: 2px;border: 1px solid #D9D9D9" class="sub" value="Поиск">
                     <input type="search" name="search_text" class="input input-search" placeholder="Поиск блюд и ресторанов">
                 </div>
@@ -74,9 +134,19 @@
                     <?php
                     include_once 'RestaurantController.php';
                     include_once 'RestaurantView.php';
+
+                    if(empty($_POST['search_text']))
+                    {
                     $res=new RestaurantController();
                     $data=new RestaurantView($res);
                     $data->getRestaurant();
+                    }
+                    else
+                    {
+                        $res=new RestaurantController();
+                        $data=new RestaurantView($res);
+                        $data->searchDishRestaurant();
+                    }
                     ?>
                 </div>
 </form>

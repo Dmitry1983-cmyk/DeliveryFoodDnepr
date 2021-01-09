@@ -23,9 +23,7 @@ class RestaurantView
 // переменную $start используем, как нумератор записей.
         $q="SELECT * FROM Restaurant LIMIT $start,$per_page";
         $res=mysqli_query($link,$q);
-        // echo '<div class="cards">';
 
-//вывод данных из бд
         while($row=mysqli_fetch_array($res)) {
             //--------------------------
             echo '
@@ -107,16 +105,16 @@ class RestaurantView
                         if(isset($_SESSION["session_username"]))
                     {
                         echo '
-                <button class="button button-primary">
-                                <span class="button-card-text">В корзину</span>
+                <input type="submit" name="bucket"  class="button button-primary" value="В корзину">
+                              <!--  <span class="button-card-text">В корзину</span> -->
                                 <img src="img/basket_shop.svg" alt="shpping-cart" class="button-card-image">
-                            </button>';
+                            </input>';
                     }else{
                         echo '
-                        <button class="button button-primary" style="display: none;">
-                                <span class="button-card-text">В корзину</span>
+                        <input type="submit" name="bucket" class="button button-primary" style="display: none;">
+                                <!--  <span class="button-card-text">В корзину</span> -->
                                 <img src="img/basket_shop.svg" alt="shpping-cart" class="button-card-image">
-                            </button>';
+                            </input>';
                     }
                        // <!------------------------------------------------------>
             echo '
@@ -181,12 +179,14 @@ class RestaurantView
                             <div class="ingridients">'. $row['Cost'] .' грн.</div>
                         </div>
                         <!-- /.card-info -->
+                        <!--
                         <div class="card-buttons">
-                            <button class="button button-primary">
-                                <span class="button-card-text">В корзину</span>
+                            <input type="submit"  name="bucket" class="button button-primary" value="В корзину">
                                 <img src="img/basket_shop.svg" alt="shpping-cart" class="button-card-image">
-                            </button>
+                            </input>
                         </div>
+                        -->
+                        <!-- /.card-card-buttons -->
                     </div>
                 </div>
 
@@ -201,3 +201,4 @@ class RestaurantView
 
 }
 ?>
+

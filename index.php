@@ -14,8 +14,6 @@ session_start();
 </head>
 <body>
 
-<form method="post" action="index.php">
-
     <div class="container">
         <header class="header">
             <a href="index.php" class="logo wow animate__animated animate__rubberBand">
@@ -37,7 +35,7 @@ session_start();
             <div class="buttons">
                 <!--------------------------Modal------------------------------------------>
                 <!--------------------------Modal------------------------------------------>
-
+ <form method="post" action="index.php">
                 <div class="main_div">
                     <input type="checkbox" id="callback">
                     <?php
@@ -54,9 +52,6 @@ session_start();
                     </label>';
                     }
                     ?>
-<!--                    <label id="lab_btn" for="callback">-->
-<!--                        <img class="button-icon" src="img/user.svg" alt="user">Войти-->
-<!--                    </label>-->
 
                     <div action="" class="popup">
                         <span>Введите данные</span>
@@ -67,7 +62,9 @@ session_start();
                         <label class="close_modal" for="callback">+</label>
                     </div>
                 </div>
+</form>
 <?php
+include_once 'Bucket.php';
 $con = mysqli_connect("localhost", "root", "", "DeliveryFoodDnepr")  or die("Ошибка " . mysqli_error($con));
 
 if(isset($_POST['register']))
@@ -106,10 +103,22 @@ if(isset($_POST['enter']))
                 <!--------------------------Modal------------------------------------------>
 
                 <!--------------------------Modal------------------------------------------>
-                <button class="button">
-                    <img class="buttn-icon" src="img/shopping-cart.svg" alt="shopping cart">
-                    <span class="button-text">Корзина</span>
-                </button>
+                <?php
+                if(isset($_SESSION["session_username"]))
+                {
+                    echo '
+            <button class="button" id="cart-button">
+                <img class="buttn-icon" src="img/shopping-cart.svg" alt="shopping cart">
+                <span class="button-text">Корзина</span>
+            </button>';
+                }else{
+                    echo '
+            <button class="button" id="cart-button" style="display: none">
+                <img class="buttn-icon" src="img/shopping-cart.svg" alt="shopping cart">
+                <span class="button-text">Корзина</span>
+            </button>';
+                }
+                ?>
 
             </div>
         </header>
@@ -125,10 +134,14 @@ if(isset($_POST['enter']))
 
 
             <section class="restaraunts">
+
+                <form method="post">
                 <div class="section-heading">
                     <input  type="submit" name="submit" style="width: 100px; height: 42px;border-radius: 2px;border: 1px solid #D9D9D9" class="sub" value="Поиск">
                     <input type="search" name="search_text" class="input input-search" placeholder="Поиск блюд и ресторанов">
                 </div>
+                </form>
+
                 <div class="cards">
 
                     <?php
@@ -149,7 +162,6 @@ if(isset($_POST['enter']))
                     }
                     ?>
                 </div>
-</form>
 </section>
 </div>
 </main>
@@ -175,7 +187,30 @@ if(isset($_POST['enter']))
     <!-- /.container -->
 </footer>
 
+<!------------------------------------------------------->
+<!-- modal -->
+<div class="modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3 class="modal-title">Корзина</h3>
+            <buton class="close">&times;</buton>
+        </div>
+        <!-- /.modal-header -->
+        <div class="modal-body">
+            <?php getBasketUser(); ?>
+        </div>
+
+        <!-- /.modal-body -->
+        <div class="modal-footer">
+            <?php totalSum();?>
+        </div>
+        <!-- /.modal-footer -->
+    </div>
+</div>
+<!------------------------------------------------------->
+
 <script src="js/wow.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

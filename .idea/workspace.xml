@@ -20,6 +20,7 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -76,6 +77,24 @@
       <workItem from="1610112029634" duration="1707000" />
       <workItem from="1610113847436" duration="2055000" />
       <workItem from="1610115917238" duration="1795000" />
+      <workItem from="1610117726108" duration="1797000" />
+      <workItem from="1610119542236" duration="1693000" />
+      <workItem from="1610128936647" duration="1797000" />
+      <workItem from="1610130747204" duration="3432000" />
+      <workItem from="1610134216263" duration="996000" />
+      <workItem from="1610194245730" duration="1785000" />
+      <workItem from="1610196048082" duration="831000" />
+      <workItem from="1610199275195" duration="1194000" />
+      <workItem from="1610204523560" duration="1835000" />
+      <workItem from="1610206371167" duration="2268000" />
+      <workItem from="1610208655908" duration="1603000" />
+      <workItem from="1610210465989" duration="1795000" />
+      <workItem from="1610212274807" duration="1366000" />
+      <workItem from="1610215061482" duration="1794000" />
+      <workItem from="1610216999076" duration="2152000" />
+      <workItem from="1610219167674" duration="811000" />
+      <workItem from="1610223148280" duration="1797000" />
+      <workItem from="1610224959398" duration="1212000" />
     </task>
     <servers />
   </component>
@@ -91,29 +110,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610102197033" />
-    <state width="1292" height="277" key="GridCell.Tab.0.bottom" timestamp="1609848897864">
+    <state width="1292" height="271" key="GridCell.Tab.0.bottom" timestamp="1610134338146">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1609848897864" />
-    <state width="1292" height="277" key="GridCell.Tab.0.center" timestamp="1609848897864">
+    <state width="1292" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610134338146" />
+    <state width="1292" height="271" key="GridCell.Tab.0.center" timestamp="1610134338145">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1609848897864" />
-    <state width="1292" height="277" key="GridCell.Tab.0.left" timestamp="1609848897863">
+    <state width="1292" height="271" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610134338145" />
+    <state width="1292" height="271" key="GridCell.Tab.0.left" timestamp="1610134338145">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1609848897863" />
-    <state width="1292" height="277" key="GridCell.Tab.0.right" timestamp="1609848897864">
+    <state width="1292" height="271" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610134338145" />
+    <state width="1292" height="271" key="GridCell.Tab.0.right" timestamp="1610134338145">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1292" height="277" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1609848897864" />
-    <state x="795" y="442" key="NewPhpFileDialog" timestamp="1610102093673">
+    <state width="1292" height="271" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610134338145" />
+    <state x="795" y="442" key="NewPhpFileDialog" timestamp="1610118473783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="795" y="442" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610102093673" />
+    <state x="795" y="442" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610118473783" />
     <state x="461" y="151" key="SettingsEditor" timestamp="1609785070188">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="151" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1609785070188" />
+    <state x="616" y="235" key="run.anything.popup" timestamp="1610205354678">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="235" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610205354678" />
   </component>
 </project>

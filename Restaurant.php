@@ -14,6 +14,7 @@ session_start();
 </head>
 <body>
 
+
 <div class="container">
     <header class="header">
         <a href="index.php" class="logo wow animate__animated animate__rubberBand">
@@ -22,12 +23,6 @@ session_start();
         <!-- поле поиска -->
         <input type="text" class="input input-adress" placeholder="Адрес доставки" />
         <div class="buttons">
-
-
-<!--            <button class="button button-primary">-->
-<!--                <img class="button-icon" src="img/user.svg" alt="user">-->
-<!--                <span class="button-text">Войти</span>-->
-<!--            </button>-->
 <!------------------------------------------------------------->
             <?php
             if(isset($_SESSION["session_username"]))
@@ -51,11 +46,12 @@ session_start();
     </header>
     <!-- /container -->
 </div>
-<main class="main">
+<main class="main"><form method="post">
     <div class="container">
         <section class="restaraunts">
             <div class="cards">
 <?php
+include_once 'Bucket.php';
 include_once 'RestaurantController.php';
 include_once 'RestaurantView.php';
 $res=new RestaurantController();
@@ -65,7 +61,7 @@ $data->getRestaurantMenu();
             </div>
             <!-- /.cards -->
         </section>
-    </div>
+    </div></form>
 </main>
 
 <footer class="footer">
@@ -90,6 +86,7 @@ $data->getRestaurantMenu();
 </footer>
 
 <!-- modal -->
+<form method="post" action="index.php">
 <div class="modal">
     <div class="modal-dialog">
         <div class="modal-header">
@@ -98,29 +95,17 @@ $data->getRestaurantMenu();
         </div>
         <!-- /.modal-header -->
         <div class="modal-body">
-            <div class="food-row">
-                <span class="food-name">Ролл угорь стандарт</span>
-                <strong class="food-price">250 usd</strong>
-                <div class="food-counter">
-                    <button class="counter-button">-</button>
-                    <span class="counter">1</span>
-                    <button class="counter-button">+</button>
-                </div>
-            </div>
-            <!-- /.foods-row -->
-
+            <?php getBasketUser(); ?>
         </div>
         <!-- /.modal-body -->
+
         <div class="modal-footer">
-            <span class="modal-pricetag">1250 usd</span>
-            <div class="footer-buttons">
-                <button class="button button-primary">Оформить заказ</button>
-                <button class="button">Отмена</button>
-            </div>
+            <?php totalSum();?>
         </div>
         <!-- /.modal-footer -->
     </div>
 </div>
+</form>
 <script src="js/wow.min.js"></script>
 <script src="js/main.js"></script>
 </body>

@@ -105,10 +105,11 @@ class RestaurantView
                         if(isset($_SESSION["session_username"]))
                     {
                         echo '
-                <input type="submit" name="bucket"  class="button button-primary" value="В корзину">
-                              <!--  <span class="button-card-text">В корзину</span> -->
-                                <img src="img/basket_shop.svg" alt="shpping-cart" class="button-card-image">
-                            </input>';
+<!--------------------------протестировать------------------------------------>
+ 
+<!--------------------------------------------------------------->
+                <div  class="go_to" > <p><a href="Dish.php?id='.$tmp_id.'&dish='. $row['Dish'].'">Ознакомиться</a></p></div> 
+                  ';
                     }else{
                         echo '
                         <input type="submit" name="bucket" class="button button-primary" style="display: none;">
@@ -121,7 +122,6 @@ class RestaurantView
                         </div>
                     </div>
                 </div>
-
             <!-- /.cards -->
            ';
             //-------------------------
@@ -179,13 +179,7 @@ class RestaurantView
                             <div class="ingridients">'. $row['Cost'] .' грн.</div>
                         </div>
                         <!-- /.card-info -->
-                        <!--
-                        <div class="card-buttons">
-                            <input type="submit"  name="bucket" class="button button-primary" value="В корзину">
-                                <img src="img/basket_shop.svg" alt="shpping-cart" class="button-card-image">
-                            </input>
-                        </div>
-                        -->
+                  <!--      <div  class="go_to" > <p><a href="Dish.php?id='.$row['Dish'].'&dish='. $row['Dish'].'">Ознакомиться</a></p></div>  -->
                         <!-- /.card-card-buttons -->
                     </div>
                 </div>
@@ -198,6 +192,63 @@ class RestaurantView
 
     }
     //-------------------------------------------------------------------
+
+    public function getDishDiscription()
+    {
+        $link = mysqli_connect("localhost", "root", "", "deliveryfooddnepr")  or die("Ошибка " . mysqli_error($link));
+
+        $per_page=6;
+        if (isset($_GET['page'])) $page=($_GET['page']-1); else $page=0;
+
+        $tmp_dish=$_GET['dish'];
+        $q="SELECT Img,Dish,Cost FROM Menu left join Restaurant on Menu.RestaurantId=Restaurant.Id where Dish='$tmp_dish' ";
+        $res=mysqli_query($link,$q);
+        while($row=mysqli_fetch_array($res)) {
+            //--------------------------
+            echo '
+                                        <!-- /.cards -->
+
+                <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                <img src="'. $row[ 'Img'].'" alt="image" class="card-omage" />
+                    <div class="card-text">
+                        <div class="card-heading">
+                            <h3 class="card-title card-title-reg">'. $row['Dish'] .'</h3>
+                        </div>
+                        <!-- /.card-heading -->
+                        <div class="card-info">
+                            <div class="ingridients">'. $row['Cost'] .' грн.</div>
+                        </div>
+                        <!-- /.card-info -->
+                        <div class="card-buttons">';
+
+            //<!----------------------------------------------------->
+            if(isset($_SESSION["session_username"]))
+            {
+                echo '
+                <input type="submit" name="bucket"  class="button button-primary" value="В корзину">
+                              <!--  <span class="button-card-text">В корзину</span> -->
+                                <img src="img/basket_shop.svg" alt="shpping-cart" class="button-card-image"> 
+                </input>  ';
+            }else{
+                echo '
+                        <input type="submit" name="bucket" class="button button-primary" style="display: none;">
+                                <!--  <span class="button-card-text">В корзину</span> -->
+                                <img src="img/basket_shop.svg" alt="shpping-cart" class="button-card-image">
+                            </input>';
+            }
+            // <!------------------------------------------------------>
+            echo '
+                        </div>
+                    </div>
+                </div>
+            <!-- /.cards -->
+           ';
+            //-------------------------
+        }
+        echo '</div>';
+
+        mysqli_close($link);
+        }
 
 }
 ?>

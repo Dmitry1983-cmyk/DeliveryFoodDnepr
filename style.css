@@ -699,6 +699,8 @@ body{
     transition: .5s ease-in-out;
 }
 
+<!------------------------------->
+
 <!--------------MODAL----------------------->
     .main_div{
         max-width: 1000px;
@@ -715,15 +717,27 @@ body{
     border-radius: 50px;
     background-color: #3ec45e;
 }
+.go_to{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 120px;
+    height: 30px;
+    background: #f78d1d;
+    border-radius: 4px;
+    display: flex;
+    align-items: center
+}
+.go_to a{
+    margin: auto;
+    margin-left: 5%;
+    color: white;
+    text-decoration: none;
+}
 #lab_btn{
     display: block;
     margin: 0 auto;
     width: 80px;
-
-    /*border: 2px solid darkcyan;*/
-    /*border-radius: 2px;*/
-    /*background-color: #3ec45e;*/
-    /*color: darkcyan;*/
 
     border: solid 1px #da7c0c;
     background: #f78d1d;

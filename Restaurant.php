@@ -57,6 +57,7 @@ include_once 'RestaurantView.php';
 $res=new RestaurantController();
 $data=new RestaurantView($res);
 $data->getRestaurantMenu();
+//$data->getDishDiscription();
 ?>
             </div>
             <!-- /.cards -->

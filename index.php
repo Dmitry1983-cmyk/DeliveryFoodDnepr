@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!Doctype html>
 <html lang="ru">
 <head>
@@ -65,7 +66,8 @@ session_start();
 </form>
 <?php
 include_once 'Bucket.php';
-$con = mysqli_connect("localhost", "root", "", "DeliveryFoodDnepr")  or die("Ошибка " . mysqli_error($con));
+$con = mysqli_connect("localhost", "root", "", "testConnectionDelivery")
+or die("Ошибка " . mysqli_error($con));
 
 if(isset($_POST['register']))
 {
@@ -78,6 +80,7 @@ if(isset($_POST['enter']))
         $login=htmlspecialchars($_POST['login']);
         $password=htmlspecialchars($_POST['psw']);
         $query =mysqli_query($con,"select * from DataUser left join LogPasUser on DataUser.PassIdUser = LogPasUser.Id
+                                        left join roleUser on DataUser.userRole = roleUser.Id
                                         WHERE UserNickname='".$login."' AND HeshPas='".$password."'");
         $numrows=mysqli_num_rows($query);
         if($numrows!=0)
@@ -86,11 +89,17 @@ if(isset($_POST['enter']))
             {
                 $dbusername=$row['UserNickname'];
                 $dbpassword=$row['HeshPas'];
+                $dbrole=$row['clientRole'];
             }
-            if($login == $dbusername && $password == $dbpassword)
+            if($login == $dbusername && $password == $dbpassword && $dbrole==0)
             {
                 $_SESSION['session_username']=$login;
                 header("Location: intropage.php");
+            }
+            if($login == $dbusername && $password == $dbpassword && $dbrole==1)
+            {
+                $_SESSION['session_username']=$login;
+                header("Location: Admin-panel-Menu.php");
             }
         } else {
 

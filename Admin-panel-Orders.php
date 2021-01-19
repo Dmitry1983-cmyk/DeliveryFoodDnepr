@@ -1,4 +1,4 @@
-  <?php include("includes/header_admin.php"); ?>
+  <?php include("includes/header_admin.php");include_once("admin_func/func.php"); ?>
 
     <div class="right-container">
         <div class="fon">
@@ -12,22 +12,14 @@
                                         <th>Имя</th>
                                         <th>Фамилия</th>
                                         <th>Номер телефона</th>
-                                        <th>Ресторан</th>
+<!--                                        <th>Ресторан</th>-->
                                         <th>Блюдо</th>
                                         <th>Цена</th>
                                         <th>Количество</th>
-                                        <th>Итого</th>
                                     </tr>
-                                    <tr class="data-user">
-                                        <td>Jill</td>
-                                        <td>Smith</td>
-                                        <td>50</td>
-                                        <td>reporter</td>
-                                        <td>qwereswr serser serser</td>
-                                        <td>123</td>
-                                        <td>2</td>
-                                        <td>2342</td>
-                                    </tr>
+
+                                        <?php getOrders();?>
+
 
                                 </table>
                             </div>

@@ -12,7 +12,10 @@ class RestaurantView
 
     public function getRestaurant()
     {
-        $link = mysqli_connect("localhost", "root", "", "deliveryfooddnepr")  or die("Ошибка " . mysqli_error($link));
+        $link = mysqli_connect("localhost", "root", "", "testConnectionDelivery")
+        or die("Ошибка " . mysqli_error($link));
+//        $link=new mysqli("localhost", "root", "", "DeliveryFoodDnepr");
+//        if($link->connect_errno) echo 'не удалось подключиться'.$link->connect_errno;
 //-------------пагинация-------------------------
         $per_page=6;// количество записей, выводимых на странице
 // получаем номер страницы
@@ -74,50 +77,55 @@ class RestaurantView
 
     public function getRestaurantMenu()
     {
-        $link = mysqli_connect("localhost", "root", "", "deliveryfooddnepr")  or die("Ошибка " . mysqli_error($link));
-        $per_page=6;
-        if (isset($_GET['page'])) $page=($_GET['page']-1); else $page=0;
+        $link = mysqli_connect("localhost", "root", "", "testConnectionDelivery") or die("Ошибка " . mysqli_error($link));
+        $per_page = 6;
+        if (isset($_GET['page'])) $page = ($_GET['page'] - 1); else $page = 0;
 
-        $start=abs($page*$per_page);
-        $tmp_id=$_GET['id'];
+        $start = abs($page * $per_page);
+        $tmp_id = $_GET['id'];
         //$q="SELECT Img,Dish,Cost FROM Menu left join Restaurant on Menu.RestaurantId=Restaurant.Id where RestaurantName='$tmp_id' LIMIT $start,$per_page";
-        $q="SELECT Img,Dish,Cost FROM Menu left join Restaurant on Menu.RestaurantId=Restaurant.Id where RestaurantName='$tmp_id' ";
-        $res=mysqli_query($link,$q);
-        while($row=mysqli_fetch_array($res)) {
+        $q = "SELECT Img,Dish,Cost FROM Menu left join Restaurant on Menu.RestaurantId=Restaurant.Id where RestaurantName='$tmp_id' ";
+        $res = mysqli_query($link, $q);
+
+        $numrows = mysqli_num_rows($res);
+        if ($numrows == 0) {
+            header("Location: repairs.php");
+        }
+        else{
+        while ($row = mysqli_fetch_array($res)) {
             //--------------------------
             echo '
                                         <!-- /.cards -->
 
                 <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                <img src="'. $row[ 'Img'].'" alt="image" class="card-omage" />
+                <img src="' . $row['Img'] . '" alt="image" class="card-omage" />
                     <div class="card-text">
                         <div class="card-heading">
-                            <h3 class="card-title card-title-reg">'. $row['Dish'] .'</h3>
+                            <h3 class="card-title card-title-reg">' . $row['Dish'] . '</h3>
                         </div>
                         <!-- /.card-heading -->
                         <div class="card-info">
-                            <div class="ingridients">'. $row['Cost'] .' грн.</div>
+                            <div class="ingridients">' . $row['Cost'] . ' грн.</div>
                         </div>
                         <!-- /.card-info -->
                         <div class="card-buttons">';
 
-                        //<!----------------------------------------------------->
-                        if(isset($_SESSION["session_username"]))
-                    {
-                        echo '
+            //<!----------------------------------------------------->
+            if (isset($_SESSION["session_username"])) {
+                echo '
 <!--------------------------протестировать------------------------------------>
  
 <!--------------------------------------------------------------->
-                <div  class="go_to" > <p><a href="Dish.php?id='.$tmp_id.'&dish='. $row['Dish'].'">Ознакомиться</a></p></div> 
+                <div  class="go_to" > <p><a href="Dish.php?id=' . $tmp_id . '&dish=' . $row['Dish'] . '">Ознакомиться</a></p></div> 
                   ';
-                    }else{
-                        echo '
+            } else {
+                echo '
                         <input type="submit" name="bucket" class="button button-primary" style="display: none;">
                                 <!--  <span class="button-card-text">В корзину</span> -->
                                 <img src="img/basket_shop.svg" alt="shpping-cart" class="button-card-image">
                             </input>';
-                    }
-                       // <!------------------------------------------------------>
+            }
+            // <!------------------------------------------------------>
             echo '
                         </div>
                     </div>
@@ -126,6 +134,7 @@ class RestaurantView
            ';
             //-------------------------
         }
+    }
         echo '</div>';
 
         $q="SELECT count(*) FROM Menu left join Restaurant on Menu.RestaurantId=Restaurant.Id where RestaurantName='$tmp_id'";
@@ -156,19 +165,22 @@ class RestaurantView
     //---------------search dish&restaurant------------------------------
     public function searchDishRestaurant()
     {
-        $link = mysqli_connect("localhost", "root", "", "deliveryfooddnepr")  or die("Ошибка " . mysqli_error($link));
+        $link = mysqli_connect("localhost", "root", "", "testConnectionDelivery")  or die("Ошибка " . mysqli_error($link));
 
         $search=$_POST['search_text'];
         $search=mb_strtolower($search);
         $q="SELECT RestaurantName,Img,Dish,Cost FROM Menu left join Restaurant on Menu.RestaurantId=Restaurant.Id  where RestaurantName like '%$search%' or Dish like'%$search%';";
         $res=mysqli_query($link,$q);
 
+
         while($row=mysqli_fetch_array($res)) {
             //--------------------------
-            echo '
-                                        <!-- /.cards -->
 
-                <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+            echo '
+            <!-- /.cards -->
+<!----------------------------test  link rest-------------------------------------->
+<a href="tmp.php?dish='.$row['Dish'].'" style="text-decoration: none" class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s"> 
+<!----------------------------/test  link rest-------------------------------------->
                 <img src="'. $row[ 'Img'].'" alt="image" class="card-omage" />
                     <div class="card-text">
                         <div class="card-heading">
@@ -182,27 +194,32 @@ class RestaurantView
                   <!--      <div  class="go_to" > <p><a href="Dish.php?id='.$row['Dish'].'&dish='. $row['Dish'].'">Ознакомиться</a></p></div>  -->
                         <!-- /.card-card-buttons -->
                     </div>
-                </div>
-
+</a>
             <!-- /.cards -->
            ';
             //-------------------------
         }
-        echo '</div>';
+
+
 
     }
-    //-------------------------------------------------------------------
 
     public function getDishDiscription()
     {
-        $link = mysqli_connect("localhost", "root", "", "deliveryfooddnepr")  or die("Ошибка " . mysqli_error($link));
+        $link = mysqli_connect("localhost", "root", "", "testConnectionDelivery")  or die("Ошибка " . mysqli_error($link));
 
-        $per_page=6;
-        if (isset($_GET['page'])) $page=($_GET['page']-1); else $page=0;
+        if(isset($_GET['dish']))
+        {
 
         $tmp_dish=$_GET['dish'];
         $q="SELECT Img,Dish,Cost FROM Menu left join Restaurant on Menu.RestaurantId=Restaurant.Id where Dish='$tmp_dish' ";
         $res=mysqli_query($link,$q);
+        $numrows=mysqli_num_rows($res);
+        if($numrows==0)
+        {
+            header("Location: repairs.php");
+        }
+        else{
         while($row=mysqli_fetch_array($res)) {
             //--------------------------
             echo '
@@ -219,7 +236,8 @@ class RestaurantView
                             <div class="ingridients">'. $row['Cost'] .' грн.</div>
                         </div>
                         <!-- /.card-info -->
-                        <div class="card-buttons">';
+                        <div class="card-buttons">
+';
 
             //<!----------------------------------------------------->
             if(isset($_SESSION["session_username"]))
@@ -244,6 +262,8 @@ class RestaurantView
             <!-- /.cards -->
            ';
             //-------------------------
+        }
+            }
         }
         echo '</div>';
 

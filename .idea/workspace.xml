@@ -10,6 +10,13 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1mcFZnSSENXcapFLl08PkhRR7Je" />
   <component name="ProjectViewState">
@@ -17,12 +24,48 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mariadb" />
+    <property name="DatabaseDriversLRU" value="sqlserver&#10;mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="C:/xampp/php/php.exe" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Проекты\PHP\testDelivery\admin-func" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHPUnit.testDelivery">
+    <configuration name="testDelivery" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner directory="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="PhpLocalRunConfigurationType" factoryName="PHP Console" nameIsGenerated="true" path="$PROJECT_DIR$/index.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PHP Script.Unnamed" />
+      <item itemvalue="PHPUnit.testDelivery" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.testDelivery" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -106,49 +149,86 @@
       <workItem from="1610298641971" duration="1811000" />
       <workItem from="1610300468667" duration="833000" />
       <workItem from="1610306237540" duration="1797000" />
-      <workItem from="1610308047077" duration="801000" />
+      <workItem from="1610308047077" duration="1196000" />
+      <workItem from="1610349011539" duration="1784000" />
+      <workItem from="1610350810353" duration="1808000" />
+      <workItem from="1610352633907" duration="1795000" />
+      <workItem from="1610354442639" duration="2194000" />
+      <workItem from="1610356653618" duration="1581000" />
+      <workItem from="1610358468107" duration="1739000" />
+      <workItem from="1610360319735" duration="1708000" />
+      <workItem from="1610362760693" duration="1796000" />
+      <workItem from="1610364797369" duration="965000" />
+      <workItem from="1610366947034" duration="599000" />
+      <workItem from="1610370723798" duration="599000" />
+      <workItem from="1610374310592" duration="599000" />
+      <workItem from="1610386015144" duration="286000" />
+      <workItem from="1610444539719" duration="1474000" />
+      <workItem from="1610446347182" duration="1795000" />
+      <workItem from="1610448160948" duration="2542000" />
+      <workItem from="1610452577672" duration="989000" />
+      <workItem from="1610473659959" duration="143000" />
+      <workItem from="1610473939990" duration="194000" />
+      <workItem from="1610519762348" duration="1395000" />
+      <workItem from="1610546952067" duration="1829000" />
+      <workItem from="1610548794654" duration="2311000" />
+      <workItem from="1610551138566" duration="932000" />
+      <workItem from="1610568115137" duration="300000" />
+      <workItem from="1610607917019" duration="691000" />
+      <workItem from="1610614342227" duration="15000" />
+      <workItem from="1610614370263" duration="1162000" />
+      <workItem from="1610615821819" duration="1813000" />
+      <workItem from="1610617659057" duration="1796000" />
+      <workItem from="1610619471982" duration="2260000" />
+      <workItem from="1610621787037" duration="1766000" />
+      <workItem from="1610623572570" duration="2066000" />
+      <workItem from="1610625658985" duration="2109000" />
+      <workItem from="1610627788214" duration="2504000" />
+      <workItem from="1610630314816" duration="1089000" />
+      <workItem from="1610632126402" duration="1805000" />
+      <workItem from="1610633958211" duration="1784000" />
+      <workItem from="1610635772580" duration="1795000" />
+      <workItem from="1610637581625" duration="1759000" />
+      <workItem from="1610650642583" duration="702000" />
+      <workItem from="1610654921014" duration="1787000" />
+      <workItem from="1610656722588" duration="1795000" />
+      <workItem from="1610659077459" duration="720000" />
+      <workItem from="1610692884634" duration="2168000" />
+      <workItem from="1610695073127" duration="1587000" />
+      <workItem from="1610697782621" duration="1704000" />
+      <workItem from="1610699885802" duration="1559000" />
+      <workItem from="1610701712948" duration="1795000" />
+      <workItem from="1610703525315" duration="1508000" />
+      <workItem from="1610705347926" duration="1793000" />
+      <workItem from="1610707161282" duration="1795000" />
+      <workItem from="1610709007033" duration="1864000" />
+      <workItem from="1610711140028" duration="1809000" />
+      <workItem from="1610712964182" duration="2202000" />
+      <workItem from="1610715179677" duration="1972000" />
+      <workItem from="1610717167304" duration="1761000" />
+      <workItem from="1610719023376" duration="1921000" />
+      <workItem from="1610720960046" duration="692000" />
+      <workItem from="1610724249494" duration="1795000" />
+      <workItem from="1610726166224" duration="1615000" />
+      <workItem from="1610727976933" duration="2166000" />
+      <workItem from="1610730157505" duration="1652000" />
+      <workItem from="1610731975659" duration="1795000" />
+      <workItem from="1610733786818" duration="2984000" />
+      <workItem from="1610736788825" duration="1353000" />
+      <workItem from="1610896382490" duration="1333000" />
+      <workItem from="1610899773511" duration="11786000" />
+      <workItem from="1610949411489" duration="5474000" />
+      <workItem from="1610982054885" duration="6907000" />
+      <workItem from="1610996349602" duration="3927000" />
+      <workItem from="1611034629226" duration="5823000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="552" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609840066113">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1609840066113" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610102197033">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610102197033" />
-    <state width="1292" height="276" key="GridCell.Tab.0.bottom" timestamp="1610306723038">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1292" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610306723038" />
-    <state width="1292" height="276" key="GridCell.Tab.0.center" timestamp="1610306723038">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1292" height="276" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610306723038" />
-    <state width="1292" height="276" key="GridCell.Tab.0.left" timestamp="1610306723038">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1292" height="276" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610306723038" />
-    <state width="1292" height="276" key="GridCell.Tab.0.right" timestamp="1610306723038">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1292" height="276" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610306723038" />
-    <state x="795" y="442" key="NewPhpFileDialog" timestamp="1610292323334">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="795" y="442" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610292323334" />
-    <state x="461" y="151" key="SettingsEditor" timestamp="1609785070188">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="151" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1609785070188" />
-    <state x="616" y="235" key="run.anything.popup" timestamp="1610299109050">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="235" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1080/3840.0.1024.768@0.0.1920.1040" timestamp="1610299109050" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

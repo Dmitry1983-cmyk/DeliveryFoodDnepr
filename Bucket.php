@@ -2,7 +2,7 @@
 
 function getBasketUser()
 {
-    $con = mysqli_connect("localhost", "root", "", "DeliveryFoodDnepr") or die("Ошибка " . mysqli_error($con));
+    $con = mysqli_connect("localhost", "root", "", "testConnectionDelivery") or die("Ошибка " . mysqli_error($con));
 
     $nickname=$_SESSION['session_username'];
     $q = mysqli_query($con,"select UserName,LastNameUser,PhoneUser,UserNickname,DishName,DishCost,DishCount,(DishCost*DishCount) as Totalsum 
@@ -51,7 +51,7 @@ from Orders left join DataUser on Orders.DataUserId=DataUser.Id where UserNickna
 
 function totalSum()
 {
-    $con = mysqli_connect("localhost", "root", "", "DeliveryFoodDnepr") or die("Ошибка " . mysqli_error($con));
+    $con = mysqli_connect("localhost", "root", "", "testConnectionDelivery") or die("Ошибка " . mysqli_error($con));
     $nickname=$_SESSION['session_username'];
     $q = mysqli_query($con,"select UserNickname,sum(DishCost*DishCount) as Totalsum
 from Orders left join DataUser on Orders.DataUserId=DataUser.Id where UserNickname='$nickname' GROUP BY UserNickname");
@@ -84,7 +84,7 @@ function Cancel()
 //---------------bucket--------------------------
 if(isset($_POST['bucket']))
 {
-    $con = mysqli_connect("localhost", "root", "", "DeliveryFoodDnepr") or die("Ошибка " . mysqli_error($con));
+    $con = mysqli_connect("localhost", "root", "", "testConnectionDelivery") or die("Ошибка " . mysqli_error($con));
 
     $nickname=$_SESSION['session_username'];
     $tmp_dish=$_GET['dish'];

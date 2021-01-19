@@ -22,51 +22,8 @@
     </div>
 </div>
 
-<?php include("includes/footer.php"); ?>
-
-<?php
-$con = mysqli_connect("localhost", "root", "", "DeliveryFoodDnepr")  or die("Ошибка " . mysqli_error($con));
-
-if(isset($_POST["register"])){
-
-    if(!empty($_POST['full_name']) && !empty($_POST['email']) && !empty($_POST['username']) && !empty(($_POST['userphone']))
-        && !empty(($_POST['nickname']))  && !empty($_POST['password'])) {
-        $lastname= htmlspecialchars($_POST['full_name']);
-        $username=htmlspecialchars($_POST['username']);
-        $email=htmlspecialchars($_POST['email']);
-        $phone=htmlspecialchars($_POST['userphone']);
-        $nickname=htmlspecialchars($_POST['nickname']);
-        $password=htmlspecialchars($_POST['password']);
-        $query=mysqli_query($con,"SELECT * FROM DataUser WHERE UserNickname='".$nickname."'");
-        $numrows=mysqli_num_rows($query);
-        if($numrows==0)
-        {
-            mysqli_query($con,"START TRANSACTION");
-
-            $query1 = mysqli_query($con,"insert into LogPasUser(HeshPas)values('$password')");
-            $query2=mysqli_query($con, "insert into DataUser(UserName,LastNameUser,UserMail,UserNickname,PhoneUser,PassIdUser)values
-('$username','$lastname','$email','$nickname','$phone', (select Id from LogPasUser where HeshPas='$password'));");
-
-            if ($query1 and $query2) {
-                mysqli_query($con,"COMMIT");
-                $message = "Аккаунт успешно создан";
-            } else {
-                mysqli_query("ROLLBACK");
-                $message = "Не удалось вставить данные!";
-            }
-
-        } else {
-            $message = "Это имя пользователя уже существует! Пожалуйста, попробуйте другое!";
-        }
-    } else {
-        $message = "Все поля должны быть обязательно заполнены!";
-    }
-}
+<?php include("includes/footer.php");
+include_once ("register/registration.php");
+registrationClient();
 ?>
 
-<?php
-if (!empty($message))
-{
-    echo "<p class='error'>" . "СООБЩЕНИЕ :". $message . "</p>";
-}
-?>
